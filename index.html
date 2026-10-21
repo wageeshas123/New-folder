@@ -28,12 +28,28 @@
 
         <section id="home" class="bg-light text-center py-5">
             <div class=" container">
-                <h1 class="mb-4">Welcome to LMS Platform</h1>
+                <h1><span id="meesage">Good Morning</span>!<br>Welcome to LMS Platform</h1>
                 <p class="lead">Your gateway to knowledge and success.Explore a wide variety of courses and resourses.
                 </p>
                 <button type="button" class="btn btn-primary btn-sm">Get Started</button>
             </div>
         </section>
+
+        <script>
+            const hour=new Date().getHours();
+            let message;
+            
+            if(hour<12){
+                message="Good Morning";
+            }
+            else if(hour<18){
+                    message="Good Afternoon";
+            }
+            else{
+                message="Good Evening";
+            }
+            document.getElementById("message").textContent=message;
+        </script>
 
         <section id="about" class="container text-center py-5">
             <h2 class="mb-4">Features</h2>
